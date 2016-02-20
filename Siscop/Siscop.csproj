@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Siscop</RootNamespace>
     <AssemblyName>Siscop</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,12 +33,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Npgsql, Version=3.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Npgsql.3.0.2\lib\net45\Npgsql.dll</HintPath>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataGridViewAutoFilter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataGridViewAutoFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.PostgreSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.v5.PostgreSql.1.1\lib\net45\EntityFramework.PostgreSql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.0.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.0.5\lib\net45\Npgsql.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,11 +68,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMano.Designer.cs">
+      <DependentUpon>AddMano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRepuesto.Designer.cs">
+      <DependentUpon>AddRepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTercero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTercero.Designer.cs">
+      <DependentUpon>AddTercero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmCliente.Designer.cs">
+      <DependentUpon>AdmCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdmUsuario.Designer.cs">
       <DependentUpon>AdmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodega.Designer.cs">
+      <DependentUpon>Bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Egreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Egreso.Designer.cs">
+      <DependentUpon>Egreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgresoOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgresoOrden.Designer.cs">
+      <DependentUpon>EgresoOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadoOrden.Designer.cs">
+      <DependentUpon>EstadoOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarMuestra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarMuestra.Designer.cs">
+      <DependentUpon>IngresarMuestra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmCatalogo.Designer.cs">
+      <DependentUpon>AdmCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarOrdenTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarOrdenTrabajo.Designer.cs">
+      <DependentUpon>IngresarOrdenTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarRequisicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarRequisicion.Designer.cs">
+      <DependentUpon>IngresarRequisicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -68,16 +165,112 @@
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo.cs" />
+    <Compile Include="PickCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickCliente.Designer.cs">
+      <DependentUpon>PickCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickEgreso.Designer.cs">
+      <DependentUpon>PickEgreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickEncargado.Designer.cs">
+      <DependentUpon>PickEncargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickEquipo.Designer.cs">
+      <DependentUpon>PickEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickOrdenTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickOrdenTrabajo.Designer.cs">
+      <DependentUpon>PickOrdenTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultadoBusqueda.Designer.cs">
+      <DependentUpon>ResultadoBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultadoBusquedaRequisicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultadoBusquedaRequisicion.Designer.cs">
+      <DependentUpon>ResultadoBusquedaRequisicion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMano.resx">
+      <DependentUpon>AddMano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRepuesto.resx">
+      <DependentUpon>AddRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTercero.resx">
+      <DependentUpon>AddTercero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmCliente.resx">
+      <DependentUpon>AdmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdmUsuario.resx">
       <DependentUpon>AdmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodega.resx">
+      <DependentUpon>Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Egreso.resx">
+      <DependentUpon>Egreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgresoOrden.resx">
+      <DependentUpon>EgresoOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadoOrden.resx">
+      <DependentUpon>EstadoOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarMuestra.resx">
+      <DependentUpon>IngresarMuestra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmCatalogo.resx">
+      <DependentUpon>AdmCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarOrdenTrabajo.resx">
+      <DependentUpon>IngresarOrdenTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarRequisicion.resx">
+      <DependentUpon>IngresarRequisicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickCliente.resx">
+      <DependentUpon>PickCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickEgreso.resx">
+      <DependentUpon>PickEgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickEncargado.resx">
+      <DependentUpon>PickEncargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickEquipo.resx">
+      <DependentUpon>PickEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickOrdenTrabajo.resx">
+      <DependentUpon>PickOrdenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,8 +280,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResultadoBusqueda.resx">
+      <DependentUpon>ResultadoBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultadoBusquedaRequisicion.resx">
+      <DependentUpon>ResultadoBusquedaRequisicion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Modelo.Orden.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,6 +312,9 @@
       <Project>{c1ed0259-df2d-46c7-8bfd-6cdb036d3729}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -27,8 +27,8 @@ namespace Conexion
 
         public void configurarConexion()
         {
-            this.server = "192.168.1.34";
-            this.port = "5433";
+            this.server = "127.0.0.1";
+            this.port = "5432";
             this.user = "postgres";
             this.password = "siscop";
             this.database = "siscop";
@@ -37,7 +37,7 @@ namespace Conexion
                                              ";Port=" + this.port +
                                              ";User Id=" + this.user +
                                              ";Password=" + this.password +
-                                             ";Database=" + this.database + ";");
+                                             ";Database=" + this.database + ";Pooling=false");
 
 
         }

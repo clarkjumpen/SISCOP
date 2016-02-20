@@ -38,7 +38,7 @@ namespace Siscop
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            NegiocioUsuario nu = new NegiocioUsuario();
+            NegocioUsuario nu = new NegocioUsuario();
 
             if (this.txtRut.Text.Trim().Equals(""))
             {
@@ -57,7 +57,7 @@ namespace Siscop
             if (nu.IniciarSesion(this.txtRut.Text.Trim(), this.txtClave.Text.Trim()) == false)
             {
 
-                MessageBox.Show(this, "El Usuario No existe", "Error, no se encuentra el usuario");
+                MessageBox.Show(this, "Rut /clave incorrectos", "Error, no se encuentra el usuario");
                 limpiarCampos();
                 return;
 
